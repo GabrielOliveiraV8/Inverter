@@ -1,0 +1,107 @@
+/* Estilo básico do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../img/Fundio do site (tecnologia).png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Estilo do menu */
+.menu {
+    background-color: #333;
+    position: fixed; /* Fixa o menu no topo */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    flex: 1;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #111;
+}
+
+/* Submenu dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #da2424;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+}
+
+/* Container centralizado */
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 60px; /* Espaço extra para compensar o menu fixo */
+}
+
+/* Quadro no centro */
+.conteudo {
+    max-width: 600px;
+    padding: 50px;
+    background-color: rgba(244, 244, 244, 0.8); /* Fundo semitransparente */
+    border: 6px solid #a30a0a;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
